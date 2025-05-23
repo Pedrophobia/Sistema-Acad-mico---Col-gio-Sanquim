@@ -28,3 +28,12 @@ O sistema identifica dois tipos de usuários: 1️⃣ Alunos – Podem visualiza
 
 🔐 login.html + login.php
 ✅ Permite autenticação de alunos e professores. ✅ Define permissões de cada usuário no sistema.
+
+⚡ Fluxo de Uso do Sistema
+1️⃣ O usuário faz login e acessa as funcionalidades disponíveis conforme seu perfil. 2️⃣ Alunos podem visualizar suas faltas e notas, além de baixar materiais. 3️⃣ Professores podem editar notas e atualizar registros de faltas diretamente. 4️⃣ O banco de dados armazena todas as informações de maneira automática e segura.
+
+📌 Possíveis Melhorias Futuras
+🔹 Melhorar a interface com animações e estilos aprimorados. 🔹 Criar um painel administrativo para permitir interações mais avançadas. 🔹 Adicionar relatórios para análise de desempenho dos alunos. 🔹 Implementar notificações para alertar alunos sobre mudanças nas notas.
+
+🚀 Conclusão
+O Sistema Acadêmico - Colégio Sanquim oferece um ambiente digital eficiente para consultas e edições de registros acadêmicos, diferenciando permissões entre alunos e professores. Com a futura integração com banco de dados, as informações serão gerenciadas de forma automática e segura, garantindo uma experiência otimizada para todos os usuários.
