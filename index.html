@@ -2,139 +2,114 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Movimentações - Colégio Sanquim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo! - Sistema Acadêmico</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff8dc;
-    }
-
-    header {
-      background-color: #fbc02d;
+      background-color: #f0f4f8; /* Off-white como na imagem */
+      font-family: Arial, sans-serif; /* Fonte similar à da imagem */
+      min-height: 100vh;
       display: flex;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    header img {
-      width: 40px;
-      margin-right: 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-      color: #00695c;
-    }
-
-    header h1 span {
-      color: #00695c
-    }
-
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      margin: 40px 0 20px 0;
-    }
-
-    .card {
-      background-color: #00796b;
-      color: white;
-      width: 150px;
-      height: 100px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      padding-top: 20px;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card i {
-      font-size: 24px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .content {
-      margin: 0 auto;
-      width: 90%;
-      max-width: 800px;
-      background: white;
-      border-radius: 10px;
+      flex-direction: column;
+      justify-content: center; /* Centraliza verticalmente */
+      align-items: center; /* Centraliza horizontalmente */
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .footer {
+    .container-main {
+      background-color: transparent; /* Fundo transparente */
+      max-width: 900px; /* Limita a largura do conteúdo */
+      width: 100%;
       text-align: center;
-      margin-top: 30px;
-      font-size: 12px;
-      color: #444;
+    }
+
+    h1 {
+      font-size: 2.8rem; /* Tamanho do "Bem-vindo!" */
+      color: #333; /* Cor do texto escuro */
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    p.subtitle {
+      font-size: 1.3rem; /* Tamanho do "Selecione uma opção:" */
+      color: #555; /* Cor um pouco mais clara */
+      margin-bottom: 40px;
+    }
+
+    .card-option {
+      background-color: #003366; /* Azul escuro dos cards */
+      border-radius: 10px; /* Bordas arredondadas */
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px; /* Altura mínima para os cards */
+    }
+
+    .card-option:hover {
+      transform: translateY(-5px); /* Efeito de levantar */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
+    }
+
+    .card-option i {
+      font-size: 4rem; /* Tamanho maior para os ícones */
+      color: #ffffff; /* Cor branca para os ícones */
+      margin-bottom: 15px;
+    }
+
+    .card-option h5 {
+      font-size: 1.5rem; /* Tamanho do texto do card */
+      color: #ffffff; /* Cor branca para o texto */
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .card-option p {
+      color: #c0c0c0; /* Cor para a descrição em branco */
+      font-size: 0.9rem;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html" class="botao-invisivel">
-      <img src="logoSanquin.jpeg" alt="Logo">
-    </a>
-    <h1>Colégio <span>Sanquim</span></h1>
-  </header>
-  
 
-  <div class="menu">
-    <div class="card" onclick="window.location.href='materiais.html'">
-      <i>📂</i>
-      Materiais de Apoio
-  </div>
-    <div class="card" onclick="window.location.href='faltas.html'">
-      <i>🚫</i>
-      Faltas
+  <main class="container-main">
+    <h1>Bem-vindo!</h1>
+    <p class="subtitle">Selecione uma opção:</p>
+
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card-option" onclick="window.location.href='materiais.html'">
+          <i class="fas fa-book"></i> <h5>Materiais de Apoio</h5>
+          <p>Apostilas e conteúdos.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card-option" onclick="window.location.href='faltas.html'">
+          <i class="fas fa-calendar-times"></i> <h5>Faltas</h5>
+          <p>% de presença por disciplina.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card-option" onclick="window.location.href='notas.html'">
+          <i class="fas fa-chart-line"></i> <h5>Notas</h5>
+          <p>Desempenho nas avaliações.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card-option" onclick="window.location.href='grades.html'">
+          <i class="fas fa-calendar-alt"></i> <h5>Horários</h5>
+          <p>Sua grade de aulas e turmas.</p>
+        </div>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='notas.html'">
-      <i>📊</i>
-      Notas
-    </div>
-  </div>
+  </main>
 
-  <div class="content" id="conteudo">
-    <h2>Bem-vindo(a)!</h2>
-    <p>Selecione uma das opções acima para visualizar suas movimentações acadêmicas.</p>
-  </div>
-
-  <div class="footer">
-    Sistema de Controle Acadêmico - Colégio Sanquim
-  </div>
-
-  <script>
-    function mostrarConteudo(tipo) {
-      const conteudo = document.getElementById('conteudo');
-      if (tipo === 'matriculas') {
-        conteudo.innerHTML = `
-          <h2>Matrículas</h2>
-          <p>Aqui você poderá visualizar e gerenciar suas matrículas.</p>
-        `;
-      } else if (tipo === 'faltas') {
-        conteudo.innerHTML = `
-          <h2>Faltas</h2>
-          <p>Confira aqui suas ausências registradas por disciplina.</p>
-        `;
-      } else if (tipo === 'notas') {
-        conteudo.innerHTML = `
-          <h2>Notas</h2>
-          <p>Visualize suas notas lançadas pelas disciplinas cursadas.</p>
-        `;
-      }
-    }
-  </script>
 </body>
 </html>

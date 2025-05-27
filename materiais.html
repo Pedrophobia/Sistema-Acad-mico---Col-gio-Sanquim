@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Materiais de Apoio - Colégio Sanquim</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #fff8dc, #fff3c0);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #fbc02d;
+      color: #00695c;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .content {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 15px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <header class="topo">
-    <a href="index.html" class="botao-invisivel">
-      <img src="logoSanquin.jpeg" alt="Logo">
-    </a>
-    <h1>Colégio <span>Sanquim</span></h1>
+
+  <header>
+    <img src="logoSanquin.jpeg" alt="Logo do Colégio Sanquim">
+    <h1>Colégio Sanquim</h1>
   </header>
-  
-  <div class="sub-header">
-    <h2>Materiais de Apoio</h2>
-  </div>
-  
 
-  <main>
-    <h2>Recursos para Estudo</h2>
-    <p>Acesse documentos, vídeos e links úteis para complementar seu aprendizado.</p>
-
-    <div class="materiais-container">
-      <div class="material-box">
-        <h3>📘 Apostila de Matemática</h3>
-        <a href="apostila_matematica.pdf" download>Baixar PDF</a>
-      </div>
-
-      <div class="material-box">
-        <h3>📖 Guia de Redação</h3>
-        <a href="guia_redacao.pdf" download>Baixar PDF</a>
-      </div>
-
-      <div class="material-box">
-        <h3>🎥 Aula sobre História</h3>
-        <a href="https://www.youtube.com/watch?v=EXEMPLO" target="_blank">Assistir no YouTube</a>
-      </div>
-
-      <div class="material-box">
-        <h3>🔗 Link para Exercícios</h3>
-        <a href="https://www.exercicios.com.br" target="_blank">Acessar site</a>
-      </div>
+  <main class="container">
+    <div class="content">
+      <h2 class="text-primary">Materiais de Apoio</h2>
+      <p>Aqui você encontrará apostilas, slides, listas de exercícios e outros materiais de estudo disponibilizados pelos professores.</p>
+      <ul class="list-group mt-4">
+        <li class="list-group-item">📘 Apostila de Matemática - PDF</li>
+        <li class="list-group-item">📙 Lista de Exercícios de Química</li>
+        <li class="list-group-item">📗 Slides de Biologia - Aula 5</li>
+      </ul>
     </div>
-
-    <button onclick="window.location.href='index.html'" class="botao-voltar">⬅ Voltar</button>
   </main>
 
   <footer>
-    <p>Sistema Acadêmico - Colégio Sanquim</p>
+    Sistema de Controle Acadêmico © Colégio Sanquim - 2025
   </footer>
-  
-  <script src="script.js"></script>
+
 </body>
 </html>
-    
