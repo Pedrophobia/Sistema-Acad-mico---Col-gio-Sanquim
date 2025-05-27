@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movimentações - Colégio Sanquim</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8dc;
+    }
+
+    header {
+      background-color: #fbc02d;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00695c;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 10px;
+      background-color: #ffffff;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .menu-item {
+      background-color: #00796b;
+      color: white;
+      border-radius: 10px;
+      padding: 25px 35px;
+      text-align: center;
+      width: 150px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu-item:hover {
+      background-color: #00695c;
+    }
+
+    .menu-item i {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logoSanquin.jpeg" alt="Logo">
+    <h1>Colégio <span style="color:#e91e63">Sanquim</span></h1>
+  </header>
+
+  <div class="menu">
+    <a href="matriculas.html" class="menu-item">
+      <i>🧾</i>
+      Matrículas
+    </a>
+    <a href="faltas.html" class="menu-item">
+      <i>🚫</i>
+      Faltas
+    </a>
+    <a href="notas.html" class="menu-item">
+      <i>📊</i>
+      Notas
+    </a>
+  </div>
+
+  <div class="content">
+    <h2 style="color:#00796b;">Bem-vindo(a)!</h2>
+    <p>Selecione uma das opções acima para visualizar suas movimentações acadêmicas.</p>
+  </div>
+
+  <div class="footer">
+    Sistema de Controle Acadêmico - Colégio Sanquim
+  </div>
+</body>
+</html>

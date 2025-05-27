@@ -1,0 +1,10 @@
+FrontEnd-Projeto Integrador (sanquin)
+
+Identidade visual(logo, cores, padroes)
+Criar tabela banco de  dados
+Tela login
+Tela principal
+Tela cadastro <---[usuarios, alunos, professores, diciplinas, turmas, esqueci a senha]
+Tela movimentacao[ matriculas, faltas, notas]
+Material didatico
+Plano docente
