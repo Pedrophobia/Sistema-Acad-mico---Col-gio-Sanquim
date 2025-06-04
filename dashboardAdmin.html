@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrativo - Colégio Sanquim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OerSvFjeoEj/b+DkQ3q8y9gXjW3SeC2n4z/y" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para o layout do Dashboard (opcional, pode ir para style.css) */
+        #sidebar {
+            background-color: var(--sanquim-teal);
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+        #sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        #sidebar .nav-link:hover,
+        #sidebar .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .card-custom {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <div class="border-end" id="sidebar">
+            <div class="sidebar-heading text-white text-center py-4 fs-5">
+                <img src="logo-sanquim.png" alt="Logo Colégio Sanquim" style="max-height: 40px;" class="mb-2">
+                <br>Painel Sanquim
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#overview" class="list-group-item list-group-item-action bg-sanquim-teal text-white active">Visão Geral</a>
+                <a href="#matricula" class="list-group-item list-group-item-action bg-sanquim-teal text-white">Matrículas</a>
+                <a href="#faltas" class="list-group-item list-group-item-action bg-sanquim-teal text-white">Controle de Faltas</a>
+                <a href="#notas" class="list-group-item list-group-item-action bg-sanquim-teal text-white">Registro de Notas</a>
+                <a href="#relatorios" class="list-group-item list-group-item-action bg-sanquim-teal text-white">Relatórios</a>
+                <a href="#configuracoes" class="list-group-item list-group-item-action bg-sanquim-teal text-white">Configurações</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper" class="flex-grow-1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-sanquim-yellow-orange border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-dark-text" id="sidebarToggle">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link text-dark-text" href="#">Olá, Administrador! <span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-text" href="#">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid main-content">
+                <h1 class="mt-4 mb-4 text-sanquim-teal">Dashboard Administrativo</h1>
+
+                <section id="overview" class="mb-5">
+                    <h2 class="text-dark-text mb-3">Visão Geral</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card card-custom bg-sanquim-yellow-orange">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark-text">Total de Alunos</h5>
+                                    <p class="card-text fs-3 text-medium-text">250</p>
+                                    <a href="#matricula" class="btn btn-outline-dark">Ver Matrículas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card card-custom bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark-text">Faltas Registradas Hoje</h5>
+                                    <p class="card-text fs-3 text-medium-text">12</p>
+                                    <a href="#faltas" class="btn btn-outline-secondary">Gerenciar Faltas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card card-custom bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark-text">Média de Notas (Geral)</h5>
+                                    <p class="card-text fs-3 text-medium-text">8.5</p>
+                                    <a href="#notas" class="btn btn-outline-secondary">Consultar Notas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="matricula" class="mb-5 d-none">
+                    <h2 class="text-dark-text">Gerenciamento de Matrículas</h2>
+                    <p class="text-medium-text">Conteúdo detalhado para matrículas, como lista de alunos, formulário de cadastro, etc.</p>
+                </section>
+
+                <section id="faltas" class="mb-5 d-none">
+                    <h2 class="text-dark-text">Controle de Faltas</h2>
+                    <p class="text-medium-text">Conteúdo detalhado para controle de faltas, com filtros por turma, aluno, data.</p>
+                </section>
+
+                <section id="notas" class="mb-5 d-none">
+                    <h2 class="text-dark-text">Registro e Consulta de Notas</h2>
+                    <p class="text-medium-text">Conteúdo detalhado para registro e consulta de notas, por disciplina, aluno.</p>
+                </section>
+
+                </div>
+        </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        // JS para alternar a sidebar e mostrar/esconder seções
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidebarToggle = document.getElementById('sidebarToggle');
+            var wrapper = document.getElementById('wrapper');
+
+            if (sidebarToggle && wrapper) {
+                sidebarToggle.addEventListener('click', function() {
+                    wrapper.classList.toggle('toggled');
+                });
+            }
+
+            // Lógica para mostrar a seção correta ao clicar nos itens da sidebar
+            document.querySelectorAll('#sidebar .list-group-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault(); // Evita que o link #overview mude a URL de forma padrão
+                    const targetId = this.getAttribute('href').substring(1); // Pega o ID da seção
+                    
+                    // Remove 'active' de todos os itens da sidebar
+                    document.querySelectorAll('#sidebar .list-group-item').forEach(link => link.classList.remove('active'));
+                    // Adiciona 'active' ao item clicado
+                    this.classList.add('active');
+
+                    // Esconde todas as seções de conteúdo
+                    document.querySelectorAll('.main-content section').forEach(section => {
+                        section.classList.add('d-none');
+                    });
+
+                    // Mostra a seção correspondente
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.remove('d-none');
+                    }
+                });
+            });
+
+            // Garante que a seção "Visão Geral" esteja visível por padrão ao carregar a página
+            document.getElementById('overview').classList.remove('d-none');
+        });
+    </script>
+</body>
+</html>
