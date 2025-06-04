@@ -1,39 +1,81 @@
-🏗️ Arquitetura do Sistema
-Frontend: HTML, CSS e JavaScript
+Sistema de Controle Acadêmico - Colégio Sanquim
+Visão Geral do Projeto
 
-Backend: PHP e MySQL (Banco de Dados)
+Este projeto consiste no desenvolvimento de um Sistema de Controle Acadêmico web, focado inicialmente no frontend, para o Colégio Sanquim, um cursinho pré-vestibular gratuito. O objetivo é proporcionar uma plataforma intuitiva para o gerenciamento e consulta de informações acadêmicas, como matrículas, faltas e notas, com uma interface moderna e alinhada à identidade visual da instituição.
 
-Servidor Local: XAMPP
+Este trabalho faz parte do Projeto Integrador do 1º semestre do curso de Análise e Desenvolvimento de Sistemas da FATEC Mogi Mirim, com estrutura preparada para futura integração com banco de dados.
+Arquitetura e Tecnologias
 
-Autenticação: Login com diferenciação entre alunos e professores
+O sistema é construído com foco na modularidade para permitir futuras expansões e a integração com um backend robusto.
 
-🔑 Gerenciamento de Usuários
-O sistema identifica dois tipos de usuários: 1️⃣ Alunos – Podem visualizar faltas, notas e materiais de apoio, mas não podem editá-los. 2️⃣ Professores – Além de visualizar, podem editar notas e registros de faltas.
+    Frontend:
+        HTML5: Estruturação das páginas.
+        CSS3 (com Bootstrap): Estilização e responsividade da interface, seguindo a identidade visual do Colégio Sanquim.
+        JavaScript: Interatividade e funcionalidades dinâmicas.
 
-📌 Fluxo de Login
-1️⃣ O usuário acessa a página de login. 2️⃣ O sistema verifica suas credenciais no banco de dados. 3️⃣ Se for aluno, ele acessa apenas conteúdos de visualização. 4️⃣ Se for professor, ele tem permissões adicionais para modificar notas e faltas.
+    Backend (Previsão para Futura Integração):
+        PHP: Linguagem de programação para o lado do servidor.
+        MySQL: Sistema de Gerenciamento de Banco de Dados.
 
-📄 Explicação das Páginas
-🏠 index.html (Página inicial)
-✅ Exibe opções para acessar Faltas, Notas e Materiais de Apoio. ✅ Redireciona para cada seção específica quando clicado.
+    Ambiente de Desenvolvimento Local:
+        XAMPP: Servidor local para simular o ambiente de produção (Apache, MySQL, PHP).
 
-📂 materiais.html (Materiais de Apoio)
-✅ Exibe PDFs, links e vídeos para consulta. ✅ Pode ser expandido para permitir upload de arquivos por professores no futuro.
+Gerenciamento de Usuários e Autenticação
 
-📊 notas.html (Consulta de Notas)
-✅ Mostra notas separadas por disciplina em cartões estilizados. ✅ Professores podem editar notas via banco de dados no futuro.
+O sistema implementa um sistema de autenticação que diferencia o acesso e as permissões de acordo com o perfil do usuário:
 
-🚫 faltas.html (Registro de Faltas)
-✅ Exibe aulas totais, faltas e porcentagem em quadrados separados. ✅ Pode ser atualizado dinamicamente conforme integração com o banco.
+    Alunos: Podem visualizar suas faltas, notas e acessar materiais de apoio. Não possuem permissões de edição.
+    Professores: Possuem as mesmas permissões de visualização dos alunos, além da capacidade de editar notas e registrar faltas.
 
-🔐 login.html + login.php
-✅ Permite autenticação de alunos e professores. ✅ Define permissões de cada usuário no sistema.
+Fluxo de Login
 
-⚡ Fluxo de Uso do Sistema
-1️⃣ O usuário faz login e acessa as funcionalidades disponíveis conforme seu perfil. 2️⃣ Alunos podem visualizar suas faltas e notas, além de baixar materiais. 3️⃣ Professores podem editar notas e atualizar registros de faltas diretamente. 4️⃣ O banco de dados armazena todas as informações de maneira automática e segura.
+    O usuário acessa a página de login (login.html).
+    O sistema verifica as credenciais informadas em um banco de dados (futura integração).
+    Com base no perfil do usuário, o sistema redireciona para a interface correspondente, aplicando as permissões de acesso.
 
-📌 Possíveis Melhorias Futuras
-🔹 Melhorar a interface com animações e estilos aprimorados. 🔹 Criar um painel administrativo para permitir interações mais avançadas. 🔹 Adicionar relatórios para análise de desempenho dos alunos. 🔹 Implementar notificações para alertar alunos sobre mudanças nas notas.
+Estrutura e Explicação das Páginas
 
-🚀 Conclusão
-O Sistema Acadêmico - Colégio Sanquim oferece um ambiente digital eficiente para consultas e edições de registros acadêmicos, diferenciando permissões entre alunos e professores. Com a futura integração com banco de dados, as informações serão gerenciadas de forma automática e segura, garantindo uma experiência otimizada para todos os usuários.
+As páginas do frontend são projetadas para oferecer uma experiência de usuário clara e funcional:
+
+    index.html (Página Inicial):
+        Ponto de entrada do sistema após o login.
+        Apresenta opções de navegação para as seções de Faltas, Notas e Materiais de Apoio.
+        Redireciona o usuário para a seção desejada ao clicar.
+
+    materiais.html (Materiais de Apoio):
+        Exibe recursos educacionais como PDFs, links externos e vídeos para consulta dos alunos.
+        Projetado para futura expansão, permitindo que professores façam upload de novos materiais.
+
+    notas.html (Consulta de Notas):
+        Apresenta as notas dos alunos, organizadas por disciplina em cartões estilizados.
+        Futuramente, será integrado com o banco de dados para permitir que professores editem as notas diretamente.
+
+    faltas.html (Registro de Faltas):
+        Exibe o total de aulas, número de faltas e a porcentagem de presença.
+        Preparado para atualizações dinâmicas e gerenciamento via integração com o banco de dados.
+
+    login.html e login.php (Autenticação):
+        Interface de login para alunos e professores.
+        login.php (no backend) é responsável pela validação das credenciais e definição das permissões de usuário.
+
+Fluxo de Uso do Sistema
+
+O sistema é projetado para um fluxo de trabalho otimizado para ambos os perfis de usuário:
+
+    Login: O usuário realiza a autenticação na página de login, acessando as funcionalidades conforme seu perfil (aluno ou professor).
+    Acesso de Alunos: Alunos podem visualizar suas informações de faltas e notas, bem como acessar e baixar materiais de apoio.
+    Acesso de Professores: Professores têm acesso completo às funcionalidades de visualização e, adicionalmente, podem editar notas e atualizar registros de faltas.
+    Armazenamento de Dados: Todas as informações serão gerenciadas e armazenadas de forma segura no banco de dados, garantindo a integridade e atualização automática dos registros (após integração com backend).
+
+Melhorias Futuras Planejadas
+
+O projeto possui um roadmap de melhorias para aprimorar a experiência e expandir a funcionalidade:
+
+    Interface e Experiência do Usuário (UX): Implementação de animações e aprimoramentos de estilo para uma navegação ainda mais fluida e visualmente atraente.
+    Painel Administrativo: Desenvolvimento de um painel de controle robusto para gerenciar usuários, disciplinas e configurações gerais do sistema.
+    Relatórios de Desempenho: Inclusão de funcionalidades para gerar relatórios detalhados sobre o desempenho acadêmico dos alunos.
+    Sistema de Notificações: Implementação de alertas para notificar alunos sobre novas notas, atualizações de faltas ou materiais.
+
+Conclusão
+
+O Sistema de Controle Acadêmico - Colégio Sanquim representa um passo significativo na digitalização da gestão acadêmica. Com sua interface moderna e a distinção clara de permissões entre alunos e professores, ele visa otimizar as consultas e edições de registros. A futura integração com um banco de dados garantirá um gerenciamento automático e seguro das informações, proporcionando uma experiência eficiente e centralizada para todos os usuários do Colégio Sanquim
