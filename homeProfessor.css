@@ -1,0 +1,124 @@
+/* Cores base (substitua pelas cores da identidade visual do Colégio Sanquim) */
+:root {
+    --sanquim-primary: #007bff; /* Exemplo: Azul Bootstrap */
+    --sanquim-secondary: #6c757d; /* Exemplo: Cinza Bootstrap */
+    --sanquim-success: #28a745;
+    --sanquim-warning: #ffc107;
+    --sanquim-info: #17a2b8;
+    --sanquim-dark: #343a40;
+}
+
+body {
+    background-color: #FFD984;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header */
+.navbar {
+    background-color: #f2c04d !important; /* Fundo branco para o navbar */
+    border-bottom: 1px solid #dee2e6; /* Linha sutil na parte inferior */
+}
+
+.navbar-brand img {
+    /* Pode adicionar box-shadow ou border-radius para a logo se desejar */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--sanquim-dark); /* Fundo escuro para a sidebar */
+    color: #ffffff; /* Texto branco */
+    min-height: 100vh; /* Altura mínima para ocupar a tela */
+    padding-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar.offcanvas {
+        width: 250px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .sidebar.offcanvas.offcanvas-start {
+        background-color: var(--sanquim-dark); /* Garante a cor no offcanvas */
+    }
+}
+
+.sidebar .nav-link {
+    color: #ced4da; /* Cor dos links normais */
+    padding: 0.75rem 1rem;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: var(--sanquim-primary); /* Cor de destaque ao passar o mouse ou ativo */
+    border-radius: 0.25rem;
+}
+
+.sidebar-title {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.content-wrapper {
+    padding: 2rem;
+}
+
+.content-area {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.content-section {
+    display: none; /* Esconde todas as seções por padrão */
+}
+
+.content-section.active {
+    display: block; /* A seção ativa é exibida */
+}
+
+/* Cards no Dashboard */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text.fs-2 {
+    font-size: 2.5rem !important; /* Garante tamanho grande para os números */
+    font-weight: bold;
+}
+
+/* Ajustes gerais de cores Bootstrap para se adequar à identidade Sanquim */
+.btn-primary {
+    background-color: var(--sanquim-primary);
+    border-color: var(--sanquim-primary);
+}
+.btn-primary:hover {
+    background-color: darken(var(--sanquim-primary), 10%); /* Escurece um pouco no hover */
+    border-color: darken(var(--sanquim-primary), 10%);
+}
+
+.btn-success {
+    background-color: var(--sanquim-success);
+    border-color: var(--sanquim-success);
+}
+
+.bg-primary { background-color: var(--sanquim-primary) !important; }
+.bg-success { background-color: var(--sanquim-success) !important; }
+.bg-warning { background-color: var(--sanquim-warning) !important; }
+.alert-info {
+    background-color: rgba(var(--sanquim-info), 0.1);
+    border-color: var(--sanquim-info);
+    color: var(--sanquim-info);
+}
+
+/* Estilos para listas e tabelas */
+.table-hover tbody tr:hover {
+    background-color: #e2f4ff; /* Leve destaque ao passar o mouse */
+}
+
+.list-group-item-action:hover {
+    background-color: #f0f0f0;
+}

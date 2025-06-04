@@ -1,0 +1,107 @@
+:root {
+    --sanquim-yellow-orange: #f2c04d;
+    --sanquim-teal: #3b9092;
+    --dark-text: #333;
+    --medium-text: #555;
+}
+
+body {
+    background-color: #FFD984;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-top: 30px;
+}
+
+/* Barra superior */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffc544;
+    color: white;
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-icons a {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.container-main {
+    background-color: transparent;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    /* Centraliza o conteúdo principal */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p.subtitle {
+    font-size: 1.3rem;
+    color: var(--medium-text);
+    margin-bottom: 40px;
+}
+
+.card-option {
+    background-color: white;
+    /* Cor para os cards de opção */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.card-option:hover {
+    background-color: rgba(255, 255, 255, 0.94);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-option i {
+    font-size: 4rem;
+    color: #379091;
+    margin-bottom: 15px;
+}
+
+.card-option h5 {
+    font-size: 1.5rem;
+    color: #379091;
+    /* Títulos brancos para contraste */
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-option p {
+    color:#000000;
+    /* Detalhes dos cards com a cor principal da barra */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+img {
+    width: 98px;
+    height: 38px;
+}
